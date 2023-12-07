@@ -1,0 +1,25 @@
+server:
+  port: 80
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+
+queueName : retryqueue1
+exchangeName : retrydirect
+routingKey : walletRetry
+dlxQueueName: dlxQueueRetry
+dlxExchangeName : dlxExchangeRetry
+
+risk:
+  rules:
+    - rule:
+      id: A
+      risks:
+        - ipRisk
+        - userRisk
+      targetClass: com.api.zhangzl.riskDemo.Service.CheckPointService
+      targetMethod: checkPoint

@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "queueName",
+      "type": "java.lang.String",
+      "description": "Description for queueName."
+  }
+] }
